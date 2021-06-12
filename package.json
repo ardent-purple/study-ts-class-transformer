@@ -1,0 +1,23 @@
+{
+  "name": "study-ts-class-transformer",
+  "version": "1.0.0",
+  "description": "a",
+  "main": "./dist/index.js",
+  "author": "me",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "class-transformer": "^0.4.0",
+    "concurrently": "^6.1.0",
+    "help": "^3.0.2",
+    "reflect-metadata": "^0.1.13"
+  },
+  "scripts": {
+    "develop": "concurrently -i -k -p \"[{name}]\" -n \"Node,TypeScript\" -c \"yellow.bold,cyan.bold\" \"yarn watch-js\" \"yarn watch-ts\"",
+    "watch-ts": "tsc -w --skipLibCheck",
+    "watch-js": "nodemon ./dist/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^15.3.0"
+  }
+}
